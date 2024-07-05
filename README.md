@@ -7,6 +7,7 @@ Sample Api + Nest.js + Graphql
 
 ```bash
 $ yarn install
+$ copy .env.example .env
 ```
 
 ## Running the app
