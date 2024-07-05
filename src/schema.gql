@@ -1,0 +1,30 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Character {
+  id: ID!
+  name: String!
+  episodes: [String!]!
+}
+
+type Query {
+  characters(args: FetchCharacterArgsDto!): [Character!]!
+}
+
+input FetchCharacterArgsDto {
+  skip: Int! = 0
+  take: Int! = 25
+}
+
+type Mutation {
+  updateCharacter(dto: CharacterDto!): Character!
+  addCharacter(dto: CharacterDto!): Character!
+  removeCharacter(id: String!): Boolean!
+}
+
+input CharacterDto {
+  name: String!
+  planet: String
+  episodes: [String!]!
+}
